@@ -1,0 +1,1122 @@
+<!DOCTYPE html >
+<html ⚡ lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="canonical" href="https://eterna1senia.github.io/task6fullstack.github.io/"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='fetch'>
+
+    <style amp-custom>
+
+        /*dekstop*/
+
+        body {
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+            font-size: 14px;
+            color: white;
+            background-color: white;
+        }
+
+        body * {
+            box-sizing: border-box;
+        }
+
+        body .container {
+            max-width: 1180px;
+            min-width: auto;
+            margin: 0 auto;
+            padding: 0 0px;
+        }
+
+        body header {
+            width: 100%;
+            height: 115px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0 auto;
+            padding: 0 15px;
+            z-index: 1000;
+        }
+
+        body header .header_inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        body header .header_inner .logo {
+            width: 123px;
+            height: 123px;
+            margin-left: -30px;
+        }
+
+        body header .header_inner nav ul {
+            display: flex;
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin: 0;
+        }
+
+        body header .header_inner nav ul li {
+            margin-left: 26px;
+            list-style-type: none;
+        }
+
+        body header .header_inner nav ul li a {
+            text-decoration: none;
+        }
+
+        body .intro {
+            height: 880px;
+            background: #31344e url('img/main image.png') no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-size: 100% 100%;
+        }
+
+        @media (max-width: 1600px) {
+            body .intro {
+                background-size: cover;
+            }
+        }
+
+        body .intro .intro_inner {
+            width: 100%;
+            max-width: 970px;
+            margin: auto;
+            text-align: center;
+        }
+
+        body .intro .intro_inner h1 {
+            font-weight: 600;
+            font-size: 100px;
+            line-height: 100px;
+            letter-spacing: 5px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        body .intro .intro_inner p {
+            font-family: "Times New Roman", sans-serif;
+            font-size: 36px;
+            line-height: 30px;
+            font-style: italic;
+            font-weight: bold;
+            opacity: 0.75;
+            margin-bottom: 0px;
+        }
+
+        body .intro .intro_inner button {
+            text-transform: uppercase;
+            font-size: 18px;
+            line-height: 21.2px;
+            color: white;
+            padding: 18px 78px 24px;
+            border: 3px solid #fff;
+            border-radius: 4px;
+            transition: 0.3s ease-out;
+            text-decoration: none;
+            background: none;
+            margin-bottom: 20px;
+        }
+
+        body .intro .intro_inner button:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: black;
+        }
+
+        body .intro .intro_inner button a {
+            text-decoration: none;
+        }
+
+        body main .features {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 100px 0;
+        }
+
+        body main .features .features_item {
+            width: 33.33333%;
+            padding: 0px 0px;
+            text-align: center;
+        }
+
+        body main .features .features_item h2 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            align-self: center;
+            position: relative;
+            font-weight: 800;
+            color: #000;
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: 1px;
+        }
+
+        body main .features .features_item h2::after {
+            display: block;
+            content: "";
+            height: 1px;
+            width: 88px;
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            border-bottom: 1px solid #f57365;
+        }
+
+        body main .features .features_item p {
+            align-self: center;
+            text-align: center;
+            line-height: 25px;
+            font-size: 16px;
+            font-weight: 300;
+            font-style: normal;
+            color: #000;
+        }
+
+        body main .containerApp {
+            background-color: #f7f7f7;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        body main .containerApp .introducingApp {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            color: #000;
+        }
+
+        body main .containerApp .introducingApp .col-left {
+            flex-basis: 50%;
+            position: relative;
+            background: url("img/iphone.png") right 14px no-repeat;
+            background-size: 540px 780px;
+            height: 780px;
+            margin-top: 102px;
+            overflow: hidden;
+            margin-right: 58px;
+        }
+
+        body main .containerApp .introducingApp .col-right {
+            flex-basis: 50%;
+            margin-top: 185px;
+            margin-left: 58px;
+        }
+
+        body main .containerApp .introducingApp .col-right h2 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            align-self: center;
+            position: relative;
+            font-weight: 800;
+            color: #000;
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: 1px;
+        }
+
+        body main .containerApp .introducingApp .col-right h2::after {
+            display: block;
+            content: "";
+            height: 1px;
+            width: 88px;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            border-bottom: 1px solid #f57365;
+        }
+
+        body main .containerApp .introducingApp .col-right p {
+            margin-bottom: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            line-height: 24px;
+            font-size: 15px;
+            letter-spacing: .5px;
+            font-weight: 400;
+            text-align: left;
+            color: #777;
+        }
+
+        body main .containerApp .introducingApp .col-right .apps {
+            width: 280px;
+        }
+
+        body main .containerApp .introducingApp .col-right .apps img {
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-bottom: 50px;
+        }
+
+        body main .containerApp .introducingApp .col-right .apps img:hover {
+            opacity: .9;
+        }
+
+        body main .review {
+            background: #31344e url('img/RectangleBack.png') no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-size: 100% 100%;
+        }
+
+        body main .review .slider {
+            max-width: 1180px;
+            min-width: auto;
+            margin: 0 auto;
+            padding: 0 0px;
+            background: #4a3949 url("img/back.png") 70% 35px no-repeat;
+            background-size: contain;
+            height: 460px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        body main .review .slider image {
+            display: block;
+            position: absolute;
+            width: 187px;
+            height: auto;
+            left: 50%;
+            top: 0;
+            transform: translate(-40%, -2%);
+        }
+
+        body main .review .slider h2 {
+            margin-top: 20px;
+            color: #FFF;
+            font-size: 30px;
+            line-height: 50px;
+            font-family: 'Lato Hairline';
+            font-weight: lighter;
+            font-style: normal;
+            opacity: 0.5;
+        }
+
+        body main .review .slider p {
+            margin-top: 15px;
+            color: #FFF;
+            font-size: 18px;
+            line-height: 36px;
+            font-family: 'Lato Hairline';
+            font-weight: 300;
+            font-style: italic;
+            opacity: 0.5;
+        }
+
+        body main .recipes {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            max-width: 100%;
+            margin-top: 100px;
+        }
+
+        body main .recipes .Text_brows {
+            margin-top: 10px;
+            margin-bottom: 40px;
+            align-self: center;
+            position: relative;
+            font-weight: 800;
+            color: #000;
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: 1px;
+        }
+
+        body main .recipes .Text_brows::after {
+            display: block;
+            content: "";
+            height: 1px;
+            width: 88px;
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            border-bottom: 1px solid #f57365;
+        }
+
+        body main .recipes .Photocontain {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        body main .recipes .Photocontain .kitchen_item {
+            position: relative;
+            box-sizing: border-box;
+            width: 20%;
+            height: auto;
+        }
+
+        body main .recipes .Photocontain .kitchen_item img {
+            width: 100%;
+            height: auto;
+            vertical-align: middle;
+        }
+
+        body main .recipes .Photocontain .kitchen_item p {
+            font-family: 'Times New Roman';
+            font-size: 16px;
+            line-height: 24px;
+            font-style: italic;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -65%);
+        }
+
+        body main .recipes .Photocontain .kitchen_item h2 {
+            position: absolute;
+            left: 50%;
+            top: 45%;
+            transform: translate(-50%, -65%);
+            font-size: 36px;
+            line-height: 38px;
+            color: white;
+        }
+
+        body main .counterCont {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-left: 15px;
+            padding-right: 15px;
+            width: 100%;
+            max-width: 1180px;
+            align-items: center;
+            margin: 50px auto;
+        }
+
+        body main .counterCont .counter {
+            text-align: center;
+            flex-direction: row;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        body main .counterCont .counter h2 {
+            margin: 0;
+            font-size: 36px;
+            line-height: 42px;
+            font-weight: 600;
+            font-style: normal;
+            color: #000;
+            letter-spacing: 2px;
+        }
+
+        body main .counterCont .counter p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 24px;
+            font-style: normal;
+            font-weight: 300;
+            color: #000;
+            opacity: 0.5;
+        }
+
+        body footer {
+            background-color: #f7f7f7;
+            border-top: 1px solid #e2e2e2;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        body footer .copy {
+            display: flex;
+            flex-direction: row;
+        }
+
+        body footer .copy p {
+            color: #8b8b8b;
+            font-size: 14px;
+            text-align: left;
+            margin: 0;
+        }
+
+        body footer .copy h2 {
+            color: #8B8B8B;
+            letter-spacing: 2px;
+            font-size: 14px;
+            text-align: right;
+            margin: 0;
+        }
+
+        a:-webkit-any-link {
+            color: #FFFFFF;
+        }
+
+
+        /*   tab    */
+
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+
+
+            body {
+                width: 100%;
+            }
+
+            body .container {
+                max-width: 750px;
+                min-width: auto;
+                margin: 0 auto;
+                padding: 0 0px;
+            }
+
+            body main .features {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 100px 0;
+                width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            body main .features .features_item {
+                width: 100%;
+            }
+
+            body main .containerApp {
+                justify-content: space-between;
+            }
+
+            body main .containerApp .introducingApp .col-left {
+                display: none;
+            }
+
+            body main .containerApp .introducingApp .col-right {
+                flex-basis: 100%;
+                margin-top: 40px;
+            }
+
+            body main .review {
+                background: #31344e url('img/RectangleBack.png') no-repeat;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background-size: 100% 100%;
+            }
+
+            body main .review .slider {
+                max-width: 750px;
+            }
+
+            body main .recipes .Photocontain .kitchen_item {
+                width: 50%;
+                height: auto;
+            }
+
+            body main .recipes .Photocontain .kitchen_item img {
+                width: 100%;
+                height: auto;
+                vertical-align: middle;
+            }
+
+            body main .counterCont {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
+                margin-top: 0px;
+                margin-bottom: 60px;
+            }
+
+            body main .counterCont .counter {
+                flex-basis: 25%;
+                margin-top: 60px;
+            }
+        }
+
+
+        /*BIGMOBILE*/
+        @media (min-width: 480px) and (max-width: 767px) {
+            body {
+                width: 100%;
+            }
+
+            body .container {
+                max-width: 80%;
+                min-width: auto;
+                margin: 0 auto;
+                padding: 0 0px;
+            }
+
+            body .intro .intro_inner h1 {
+                font-size: 85px;
+            }
+
+            body .intro .intro_inner p {
+                font-size: 30px;
+            }
+
+            body main .features {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 100px 0;
+                width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            body main .features .features_item {
+                width: 100%;
+            }
+
+            body main .containerApp {
+                justify-content: space-between;
+            }
+
+            body main .containerApp .introducingApp .col-left {
+                display: none;
+            }
+
+            body main .containerApp .introducingApp .col-right {
+                flex-basis: 100%;
+                margin-top: 40px;
+            }
+
+            body main .review .slider {
+                max-width: 450px;
+            }
+
+            body main .review .slider h2 {
+                margin-top: 20px;
+                color: #FFF;
+                font-size: 25px;
+                line-height: 50px;
+                font-family: 'Lato Hairline';
+                font-weight: lighter;
+                font-style: normal;
+                opacity: 0.5;
+            }
+
+            body main .review .slider p {
+                margin-top: 15px;
+                color: #FFF;
+                font-size: 16px;
+                line-height: 36px;
+                font-family: 'Lato Hairline';
+                font-weight: 300;
+                font-style: italic;
+                opacity: 0.5;
+            }
+
+            body main .recipes .Photocontain .kitchen_item {
+                width: 50%;
+                height: auto;
+            }
+
+            body main .recipes .Photocontain .kitchen_item img {
+                width: 100%;
+                height: auto;
+                vertical-align: middle;
+            }
+
+            body main .counterCont {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                width: 80%;
+                margin-top: 0px;
+                margin-bottom: 60px;
+            }
+
+            body main .counterCont .counter {
+                flex-basis: 25%;
+                margin-top: 60px;
+            }
+
+            body footer {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            body footer .copy {
+                flex-direction: column;
+                flex-basis: 50%;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            body footer .copy p {
+                text-align: center;
+            }
+
+            body footer .copy h2 {
+                text-align: center;
+            }
+        }
+
+
+        /*SMALLMOBILE*/
+        @media screen and (max-width: 480px) {
+            body {
+                width: 100%;
+            }
+
+            body .container {
+                max-width: 80%;
+                min-width: auto;
+                margin: 0 auto;
+                padding: 0 0px;
+            }
+
+            body header {
+                width: 100%;
+                height: 115px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin: 0 auto;
+                padding: 0 15px;
+                z-index: 1000;
+            }
+
+            body header .header_inner {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            body header .header_inner .logo {
+                width: 123px;
+                height: 123px;
+                margin-left: -30px;
+            }
+
+            body header .header_inner nav ul {
+                display: flex;
+                font-size: 15px;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-decoration: none;
+                margin: 0;
+            }
+
+            body header .header_inner nav ul li {
+                margin-left: 26px;
+                list-style-type: none;
+            }
+
+            body header .header_inner nav ul li a {
+                display: none;
+                text-decoration: none;
+            }
+
+            body .intro .intro_inner h1 {
+                font-size: 60px;
+            }
+
+            body .intro .intro_inner p {
+                font-size: 25px;
+            }
+
+            body main .features {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 100px 0;
+                width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            body main .features .features_item {
+                width: 100%;
+            }
+
+            body main .containerApp {
+                justify-content: space-between;
+            }
+
+            body main .containerApp .introducingApp .col-left {
+                display: none;
+            }
+
+            body main .containerApp .introducingApp .col-right {
+                margin-left: 0;
+                flex-basis: 100%;
+                margin-top: 40px;
+            }
+
+            body main .containerApp .introducingApp .col-right h2 {
+                font-size: 14px;
+            }
+
+            body main .containerApp .introducingApp .col-right p {
+                font-size: 12px;
+            }
+
+            body main .review .slider {
+                width: 80%;
+            }
+
+            body main .review .slider h2 {
+                margin-top: 20px;
+                color: #FFF;
+                font-size: 20px;
+                line-height: 25px;
+                font-family: 'Lato Hairline';
+                font-weight: lighter;
+                font-style: normal;
+                opacity: 0.5;
+            }
+
+            body main .review .slider p {
+                margin-top: 15px;
+                color: #FFF;
+                font-size: 14px;
+                line-height: 36px;
+                font-family: 'Lato Hairline';
+                font-weight: 300;
+                font-style: italic;
+                opacity: 0.5;
+            }
+
+            body main .recipes .Photocontain .kitchen_item {
+                width: 100%;
+                height: auto;
+            }
+
+            body main .recipes .Photocontain .kitchen_item img {
+                width: 100%;
+                height: auto;
+                vertical-align: middle;
+            }
+
+            body main .recipes .Photocontain .kitchen_item p {
+                font-family: 'Times New Roman';
+                font-size: 14px;
+                line-height: 24px;
+                font-style: italic;
+                font-weight: bold;
+                text-align: center;
+                color: white;
+                position: absolute;
+                top: 35%;
+                left: 50%;
+                transform: translate(-50%, -65%);
+            }
+
+            body main .recipes .Photocontain .kitchen_item h2 {
+                position: absolute;
+                left: 50%;
+                top: 45%;
+                transform: translate(-50%, -65%);
+                font-size: 25px;
+                line-height: 38px;
+                color: white;
+            }
+
+            body main .counterCont {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                width: 80%;
+                margin-top: 0px;
+                margin-bottom: 60px;
+            }
+
+            body main .counterCont .counter {
+                flex-basis: 25%;
+                margin-top: 60px;
+            }
+
+            body footer {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            body footer .copy {
+                flex-direction: column;
+                flex-basis: 50%;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            body footer .copy p {
+                text-align: center;
+            }
+
+            body footer .copy h2 {
+                text-align: center;
+            }
+        }
+    </style>
+    <title>4 задание</title>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden;
+            }
+            to {
+                visibility: visible;
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden;
+            }
+            to {
+                visibility: visible;
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden;
+            }
+            to {
+                visibility: visible;
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden;
+            }
+            to {
+                visibility: visible;
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden;
+            }
+            to {
+                visibility: visible;
+            }
+        }</style>
+    <noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none;
+            }
+        </style>
+    </noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="header_inner">
+            <div class="logo">
+                <amp-img src="img/logo.png" alt="" width="129"
+                         height="108" layout="responsive"></amp-img>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href=“/x”>LOG IN</a></li>
+                    <li><a href=“/y”>SIGN UP</a></li>
+                    <li>
+                        <div>
+                            <amp-img src="img/menu.png" alt="" width="14"
+                                     height="10"></amp-img>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<!-- Intro -->
+<div class="intro">
+    <div class="intro_inner">
+        <p>Find your Favorite</p>
+        <h1>RECIPES</h1>
+        <div>
+            <button type="button">GET STARTED</button>
+        </div>
+        <div>OR SEND US YOUR OWN RECIPES AND <a href=“/x”>GET REWARDED!</a></div>
+    </div>
+</div>
+<!-- CARD -->
+<main>
+    <div class="container">
+        <div class="features">
+            <div class="features_item">
+                <amp-img src="img/card1.png" alt="" width="107"
+                         height="107"></amp-img>
+                <h2>GET INSPIRED</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma.
+                    Aliquam erat volutpat.</p>
+            </div>
+            <div class="features_item">
+                <amp-img src="img/card2.png" alt="" width="107"
+                         height="107"></amp-img>
+                <h2>GET REWARDED</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma.
+                    Aliquam erat volutpat.</p>
+            </div>
+            <div class="features_item">
+                <amp-img src="img/card3.png" alt="" width="107"
+                         height="107"></amp-img>
+                <h2>GET SOCIAL</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma.
+                    Aliquam erat volutpat.</p>
+            </div>
+
+        </div>
+    </div>
+    <!-- APP -->
+    <div class="containerApp">
+        <div class="container">
+            <div class="introducingApp">
+                <div class="col-left">
+                </div>
+                <div class="col-right">
+
+                    <h2>INTRODUCING THE FUDI APP</h2>
+                    <p>Morbi eget posuere dolor. Pellentesque cursus aliquet aliquet. Aeneanet
+                        felis sit amet diam mollis ullamcorper. Nullam consequat sem a ante vest
+                        ibulum tristique. Suspendisse tristique lacus ac mattis porta. </p>
+
+                    <p>Vivamus ligula quam, vehicula non lacinia sed, faucibus sit amet libero. In
+                        libero dui, eleifend eu nisi id, egestas fringilla odio. In varius quam a mas
+                        sa hendrerit ullamcorper a eu justo. Suspendisse porta mattis convallis.
+                        Aenean tempus ligula ac odio rhoncus, quis aliquam dolor accumsan. </p>
+
+                    <p>Suspendisse aliquet felis consectetur libero congue, sed pulvinar diam
+                        malesuada. Duis vehicula a nibh id hendrerit. Donec sit amet ultrices
+                        ante, a mattis massa. </p>
+
+                    <div class="apps"><a href="12">
+                        <amp-img src="img/appstore.png" alt="app-store" width="112"
+                                 height="39"></amp-img>
+                    </a><a href="13">
+                        <amp-img src="img/googleplay.png" alt="google-play" width="120"
+                                 height="39"></amp-img>
+                    </a></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="review">
+        <div class="slider">
+            <div>
+                <amp-img src="img/face.png" alt="" width="114" height="114"></amp-img>
+            </div>
+            <h2>“I am so happy because I found this recipe, and it just made my life easier. <br>Thanks so much for
+                sharing!"</h2>
+            <p>Michael Dawson, San Francisco, CA</p>
+            <div>
+                <amp-img src="img/dots.png" alt="" width="50" height="10"></amp-img>
+            </div>
+        </div>
+    </div>
+    <div class="recipes">
+        <div class="Text_brows">BROWSE BY CUISINES</div>
+        <div class="Photocontain">
+            <div class="kitchen_item">
+                <amp-img src="img/pic1.png" alt="" width="320" height="225" layout="responsive"></amp-img>
+                <p>327 Recipes</p>
+                <h2>ITALIAN</h2>
+            </div>
+            <div class="kitchen_item">
+                <amp-img src="img/pic2.png" alt="" width="320" height="225" layout="responsive"></amp-img>
+                <p>836 Recipes</p>
+                <h2>INDIAN</h2>
+            </div>
+            <div class="kitchen_item">
+                <amp-img src="img/pic3.png" alt="" width="320" height="225" layout="responsive"></amp-img>
+                <p>27 Recipes</p>
+                <h2>FRENCH</h2>
+            </div>
+            <div class="kitchen_item">
+                <amp-img src="img/pic4.png" alt="" width="320" height="225" layout="responsive"></amp-img>
+                <p>174 Recipes</p>
+                <h2>STEAKHOUSE</h2>
+            </div>
+            <div class="kitchen_item">
+                <amp-img src="img/pic5.png" alt="" width="320" height="225" layout="responsive"></amp-img>
+                <p>731 Recipes</p>
+                <h2>SEAFOOD</h2>
+            </div>
+            <div class="kitchen_item">
+                <amp-img src="img/pic6.png" alt="" width="320" height="225" layout="responsive"></amp-img>
+                <p>237 Recipes</p>
+                <h2>SUSHI</h2>
+            </div>
+            <div class="kitchen_item">
+                <amp-img src="img/pic7.png" alt="" width="320" height="225" layout="responsive"></amp-img>
+                <p>529 Recipes</p>
+                <h2>MEXICAN</h2>
+            </div>
+            <div class="kitchen_item">
+                <amp-img src="img/pic8.png" alt="" width="320" height="225" layout="responsive"></amp-img>
+                <p>145 Recipes</p>
+                <h2>CHINESE</h2>
+            </div>
+            <div class="kitchen_item">
+                <amp-img src="img/pic9.png" alt="" width="320" height="225" layout="responsive"></amp-img>
+                <p>327 Recipes</p>
+                <h2>PIZZA</h2>
+            </div>
+            <div class="kitchen_item">
+                <amp-img src="img/pic10.png" alt="" width="320" height="225" layout="responsive"></amp-img>
+                <p>1.437 Recipes</p>
+                <h2>AMERICAN</h2>
+            </div>
+        </div>
+    </div>
+    <div class="counterCont">
+        <div class="counter"><h2>23,567</h2>
+            <p>Recipes Available</p></div>
+        <div class="counter"><h2>431,729</h2>
+            <p>Active User</p></div>
+        <div class="counter"><h2>892,173</h2>
+            <p>Positive Reviews</p></div>
+        <div class="counter">
+            <h2>56,581</h2>
+            <p>Photos & Videos</p></div>
+        <div class="counter"><h2>3,182</h2>
+            <p>Spices and Herbs</p></div>
+    </div>
+</main>
+<footer>
+
+    <div class="copy"><p>©2014 Fudi. All Rights Reserved.</p></div>
+    <div class="copy"><h2>DESIGN BY:WWW.BEKADES.COM</h2></div>
+
+</footer>
+</body>
+</html>
